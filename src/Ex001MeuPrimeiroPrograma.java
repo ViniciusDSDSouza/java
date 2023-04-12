@@ -1,4 +1,4 @@
-public class MeuPrimeiroPrograma {
+public class Ex001MeuPrimeiroPrograma {
     public static String nome = "Vinicius";
     public static void main(String[] args) {
         int idade = 17;

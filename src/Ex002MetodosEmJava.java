@@ -1,4 +1,4 @@
-public class MetodosEmJava {
+public class Ex002MetodosEmJava {
     public static void main(String[] args) {
         soma(5,10);
         soma(7,17);
