@@ -1,19 +1,21 @@
+package Ex004Operadores;
+
 import java.util.Scanner;
 
 public class Ex004Operadores {
     public static void main(String[] args) {
 
-        double n1,n2;
+        float n1,n2;
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Qual o seu nome?");
         String nome = scan.nextLine();
 
         System.out.println("Escolha um número: ");
-        n1 = scan.nextDouble();
+        n1 = scan.nextFloat();
 
         System.out.println("Escolha outro número: ");
-        n2 = scan.nextDouble();
+        n2 = scan.nextFloat();
 
         mensagem(nome);
 
@@ -25,8 +27,8 @@ public class Ex004Operadores {
         scan.close();
     }
 
-    static void soma(double  n1, double n2) {
-        double somaRes = n1 + n2;
+    static void soma(float  n1, float n2) {
+        float somaRes = n1 + n2;
         String txt = n1 + " + " + n2 + " = ";
 
         // Retirar .00 dos números inteiros
@@ -37,8 +39,8 @@ public class Ex004Operadores {
         }
     }
 
-    static void subtracao(double n1, double n2){
-        double subtracaoRes = n1 - n2;
+    static void subtracao(float n1, float n2){
+        float subtracaoRes = n1 - n2;
         String txt = n1 + " - " + n2 + " = ";
 
         if (subtracaoRes - (int)subtracaoRes != 0) {
@@ -48,8 +50,8 @@ public class Ex004Operadores {
         }
     }
 
-    static void multiplicacao (double n1, double n2) {
-        double multiplicacaoRes = n1 * n2;
+    static void multiplicacao (float n1, float n2) {
+        float multiplicacaoRes = n1 * n2;
         String txt = n1 + " * " + n2 + " = ";
         
         if (multiplicacaoRes - (int)multiplicacaoRes != 0) {
@@ -59,8 +61,8 @@ public class Ex004Operadores {
         }
     }
 
-    static void divisao(double n1, double n2) {
-        double divisaoRes = n1 / n2;
+    static void divisao(float n1, float n2) {
+        float divisaoRes = n1 / n2;
         String txt = n1 + " / " + n2 + " = ";
         
         if (divisaoRes - (int)divisaoRes != 0) {

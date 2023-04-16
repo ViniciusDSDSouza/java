@@ -1,8 +1,10 @@
+package Ex001MeuPrimeiroPrograma;
+
 public class Ex001MeuPrimeiroPrograma {
-    public static String nome = "Vinicius";
     public static void main(String[] args) {
+        String nome = "Vinicius";
         int idade = 17;
-        double dinheiro = 7.45;
+        float dinheiro = 7.45f;
         char generoAbreviado = 'm';
         String genero = null;
         boolean maioridade;
@@ -17,6 +19,8 @@ public class Ex001MeuPrimeiroPrograma {
             genero = "Masculino";
         } else if (generoAbreviado == 'f') {
             genero = "Feminino";
+        } else {
+            genero = null;
         }
 
         System.out.println("Olá " + nome + "!");

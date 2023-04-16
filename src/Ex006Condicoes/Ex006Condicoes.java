@@ -1,3 +1,5 @@
+package Ex006Condicoes;
+
 public class Ex006Condicoes {
 
     public static void main(String[] args) {

@@ -1,3 +1,5 @@
+package Ex005EstruturaDeRepeticoes;
+
 import java.util.Random;
 import java.util.Scanner;
 

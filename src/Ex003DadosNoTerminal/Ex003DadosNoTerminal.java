@@ -1,4 +1,7 @@
+package Ex003DadosNoTerminal;
+
 import java.util.Scanner;
+
 public class Ex003DadosNoTerminal{
     public static void main(String[] args) {
 
