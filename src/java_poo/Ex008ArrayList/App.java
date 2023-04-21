@@ -28,7 +28,7 @@ public class App {
         mostrarArrayList(arrayDinamico);
     }
 
-    static void mostrarArrayList(ArrayList array){
+    static void mostrarArrayList(ArrayList<String> array){
         for(int c = 0; c < array.size(); c++){
             System.out.println(array.get(c));
         }
