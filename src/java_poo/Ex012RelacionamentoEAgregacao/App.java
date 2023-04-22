@@ -4,16 +4,18 @@ import java_poo.Ex012RelacionamentoEAgregacao.classes.*;
 
 public class App {
     public static void main(String[] args) {
+        Telefone telefone = new Telefone("4002 8922");
+        telefone.getContatos().adicionar("Luan","50531583");
+        telefone.getContatos().adicionar("Joao","75252563");
+        telefone.getContatos().adicionar("Lucas","14737457");
+        Contato maria = new Contato("Maria","57893582");
+        telefone.getContatos().adicionar(maria);
 
-        Telefone celular = new Telefone("4002 8922");
-        Contato contato1 = new Contato("Cleitinho", "28491234");
-        Contato contato2 = new Contato("Robertinho", "43145735");
-        Contato contato3 = new Contato("Marquinho", "74524213");
+        System.out.println(telefone.getContatos().toString());
+        System.out.println(telefone.getContatos().buscar("l"));
 
-        celular.getListaDeContatos().adicionar(contato1);
-        celular.getListaDeContatos().adicionar(contato2);
-        celular.getListaDeContatos().adicionar(contato3);
-
-        System.out.println(celular.getListaDeContatos());
+        telefone.ligar("41904546");
+        System.out.println("");
+        telefone.ligar(maria);
     }
 }

@@ -1,31 +1,22 @@
 package java_poo.Ex012RelacionamentoEAgregacao.classes;
 
-public class Telefone {
-
-    // Variáveis
+public class Telefone extends Ligacao{
     private String numeroChip;
-    private ListaContatos listaDeContatos;
+    private Contatos contatos;
+    private Chamadas chamadas;
 
-    // Constructor
     public Telefone(String numeroChip) {
         this.numeroChip = numeroChip;
-        this.listaDeContatos = new ListaContatos();
+        this.contatos = new Contatos();
+        this.chamadas = new Chamadas();
     }
-
-    // Getters e Setters
     public String getNumeroChip() {
         return numeroChip;
     }
-
-    public void setNumeroChip(String numeroChip) {
-        this.numeroChip = numeroChip;
+    public Contatos getContatos() {
+        return contatos;
     }
-
-    public ListaContatos getListaDeContatos() {
-        return listaDeContatos;
-    }
-
-    public void setListaDeContatos(ListaContatos listaDeContatos) {
-        this.listaDeContatos = listaDeContatos;
+    public Chamadas getChamadas() {
+        return chamadas;
     }
 }

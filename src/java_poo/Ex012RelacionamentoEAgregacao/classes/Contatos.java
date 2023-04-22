@@ -2,26 +2,30 @@ package java_poo.Ex012RelacionamentoEAgregacao.classes;
 
 import java.util.ArrayList;
 
-public class ListaContatos {
+public class Contatos {
+    ArrayList<Contato> contatos;
 
-    // Variáveis
-    private ArrayList<Contato> contatos;
-
-    // Constructor
-    public ListaContatos() {
-        this.contatos = new ArrayList<Contato>(); 
+    public Contatos() {
+        this.contatos = new ArrayList<Contato>();
     }
-
-    // Metodos Próprios
     public void adicionar(String nome, String numero) {
         Contato novoContato = new Contato(nome, numero);
         contatos.add(novoContato);
     }
-
     public void adicionar(Contato novoContato) {
         contatos.add(novoContato);
     }
-
+    public Contatos buscar(String palavraChave) {
+        String palavraChaveMinuscula = palavraChave.toLowerCase();
+        Contatos contatosFiltrados = new Contatos();
+        for (Contato contato : contatos) {
+            String nomeContato = contato.getNome().toLowerCase();
+            if(nomeContato.contains(palavraChaveMinuscula)) {
+                contatosFiltrados.adicionar(contato);
+            }
+        }
+        return contatosFiltrados;
+    }
     @Override
     public String toString() {
         String informacao = "Contatos:\n";
@@ -30,8 +34,6 @@ public class ListaContatos {
         }
         return informacao;
     }
-
-    // Getters e Setters
     public ArrayList<Contato> getContatos() {
         return contatos;
     }
