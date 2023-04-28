@@ -3,12 +3,12 @@ package java_poo.Ex012RelacionamentoDeClasses.classes;
 public class Telefone {
     private String chipTelefone;
     private ListaDeContatos listaDeContatos;
-    private Ligacoes ligacoes;
+    private ListaDeLigacoes listaDeLigacoes;
 
     public Telefone (String chipTelefone) {
         this.chipTelefone = chipTelefone;
-        listaDeContatos = new ListaDeContatos();
-        ligacoes = new Ligacoes();
+        this.listaDeContatos = new ListaDeContatos();
+        this.listaDeLigacoes = new ListaDeLigacoes();
     }
     public void adicionar(Contato contato){
         listaDeContatos.adicionar(contato);
@@ -16,19 +16,22 @@ public class Telefone {
     public void adicionar(String nome, String numero) {
         listaDeContatos.adicionar(nome, numero);
     }
-    public void ligar(Contato contato){
-        getLigacoes().ligar(contato);
-    }
     public void ligar(String numero) {
-        getLigacoes().ligar(numero);
+        Ligacao ligacao = new Ligacao(chipTelefone, numero);
+        ligacao.ligar();
+        listaDeLigacoes.adicionar(ligacao);
+    }
+    public void ligar(Contato contato) {
+        this.ligar(contato.getNumero());
     }
     public String getChipTelefone() {
-        return chipTelefone;
+        String meuNumero = String.format("Seu número é: %s",chipTelefone);
+        return meuNumero;
     }
     public ListaDeContatos getListaDeContatos() {
         return listaDeContatos;
     }
-    public Ligacoes getLigacoes() {
-        return ligacoes;
+    public ListaDeLigacoes getListaDeLigacoes() {
+        return listaDeLigacoes;
     }
 }
