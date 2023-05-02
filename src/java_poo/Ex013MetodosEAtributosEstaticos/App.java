@@ -20,7 +20,8 @@ public class App {
         Carro ferrari = new Carro("Ferrari", 2023);
         Carro fusca = new Carro("Fusca", 1999);
 
-        ferrari.rodas = 2; // Muda o fusca também, por "int rodas" ser um atributo estático
+        //ferrari.rodas = 2; --> Muda o fusca também, por "int rodas" ser um atributo estático
+        Carro.rodas = 2;
         Carro.rodas = 4;
 
         System.out.println(ferrari.getNome());
