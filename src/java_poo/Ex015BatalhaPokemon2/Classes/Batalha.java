@@ -5,12 +5,12 @@ import javax.swing.JOptionPane;
 import java_poo.Ex015BatalhaPokemon2.Classes.Pokemon.*;
 
 public class Batalha {
-    Bulbasaur bulbasaur;
-    Charmander charmander;
-    Squirtle squirtle;
-    Ratata ratata;
+    private Bulbasaur bulbasaur;
+    private Charmander charmander;
+    private Squirtle squirtle;
+    private Ratata ratata;
 
-    public Batalha(Bulbasaur bulbasaur, Ratata ratata) {
+    protected Batalha(Bulbasaur bulbasaur, Ratata ratata) {
         ratataSelvagem(ratata);
         this.bulbasaur = bulbasaur;
         while(true) {
@@ -29,7 +29,7 @@ public class Batalha {
         }
     }
 
-    public Batalha (Charmander charmander, Ratata ratata) {
+    protected Batalha (Charmander charmander, Ratata ratata) {
         ratataSelvagem(ratata);
         this.charmander = charmander;
         while(true) {
@@ -48,7 +48,7 @@ public class Batalha {
         }
     }
 
-    public Batalha (Squirtle squirtle, Ratata ratata) {
+    protected Batalha (Squirtle squirtle, Ratata ratata) {
         ratataSelvagem(ratata);
         this.squirtle = squirtle;
         while(true) {
@@ -66,7 +66,7 @@ public class Batalha {
         }
     }
 
-    public void ratataSelvagem(Ratata ratata) {
+    private void ratataSelvagem(Ratata ratata) {
         JOptionPane.showMessageDialog(null,"Um " + ratata.getNome() + " selvagem apareceu!\nVida: " + ratata.getVida());
         this.ratata = ratata;
     }
